@@ -8,6 +8,12 @@ int main(int argc, char *argv[]){
   int y; 
   int z;
   int invalid = 1;
+  if (argc == 0){
+    printf("ERROR: Invalid or no arguments. \n");
+    printf("DIRECTIONS\n");
+    printf("\t./a.out user will read 3 ints from stdin and print either valid or invalid.\n");
+    printf("\t./a.out horizontal will treat each line of input as a triangle, and print the total number of valid triangles in the set.\n");
+  }
   if (strcmp(argv[1],"user") == 0){
     fgets(input, 255, stdin);
     sscanf(input, "%d %d %d", &x, &y, &z);
