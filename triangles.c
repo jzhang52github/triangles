@@ -10,7 +10,6 @@ int main(int argc, char *argv[]){
   if (strcmp(argv[1],"user") == 0){
     fgets(input, 255, stdin);
     sscanf(input, "%d %d %d", &x, &y, &z);
-    printf("The input values are %d, %d, %d\n", x, y, z);
     printf("RESULT\n");
     if((x+y)>z&&(y+z)>x&&(z+x)>y){
       printf("\tValid\n");
