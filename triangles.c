@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
     printf("Out of %d triangles tested, there are %d valid triangles in the set.\n",total,counter);
     invalid = 0;
   }
-  if (invalid == 1){
+  if (invalid == 1 || argv[1] == NULL){
     printf("ERROR: Invalid or no arguments. \n");
     printf("DIRECTIONS\n");
     printf("\t./a.out user will read 3 ints from stdin and print either valid or invalid.\n");
