@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
     }
   }
   if (strcmp(argv[1],"horizontal") == 0){
-    FILE * input_file = fopen("input.txt","r");
+    FILE * input_file = fopen("input","r");
     int counter = 0;
     int total = 0;
     while(fgets(input, 255, input_file)){
