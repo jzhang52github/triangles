@@ -7,6 +7,7 @@ int main(int argc, char *argv[]){
   int x; 
   int y; 
   int z;
+  int invalid = 1;
   if (strcmp(argv[1],"user") == 0){
     fgets(input, 255, stdin);
     sscanf(input, "%d %d %d", &x, &y, &z);
@@ -17,6 +18,7 @@ int main(int argc, char *argv[]){
     else{
       printf("\tInvalid\n");
     }
+    invalid = 0;
   }
   if (strcmp(argv[1],"horizontal") == 0){
     FILE * input_file = fopen("input","r");
@@ -30,8 +32,9 @@ int main(int argc, char *argv[]){
       total++; 
     }
     printf("Out of %d triangles tested, there are %d valid triangles in the set.\n",total,counter);
+    invalid = 0;
   }
-  else{
+  if (invalid == 1){
     printf("ERROR: Invalid or no arguments. \n");
     printf("DIRECTIONS\n");
     printf("\t./a.out user will read 3 ints from stdin and print either valid or invalid.\n");
