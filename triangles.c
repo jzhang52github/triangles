@@ -7,7 +7,7 @@ int main(int argc, char *argv[]){
   int x; 
   int y; 
   int z;
-  if (strcmp(argv[1],"user") == 0){
+  if (strcmp(argv[0],"user") == 0){
     fgets(input, 255, stdin);
     sscanf(input, "%d %d %d", &x, &y, &z);
     printf("The input values are %d, %d, %d\n", x, y, z);
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
       printf("\tInvalid\n");
     }
   }
-  if (strcmp(argv[1],"horizontal") == 0){
+  if (strcmp(argv[0],"horizontal") == 0){
     FILE * input_file = fopen("input","r");
     int counter = 0;
     int total = 0;
